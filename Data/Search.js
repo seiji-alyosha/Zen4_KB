@@ -1,0 +1,1 @@
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../Content/Content for Reuse/Concept-Warranty-TechCompany.htm'],s:['0','still'],p:[['0',13],['company',35],['install',33],['procedure',38],['time',17]]});

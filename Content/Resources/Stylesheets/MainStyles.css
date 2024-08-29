@@ -1,0 +1,2193 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+/*===========================================================================================================================================================
+
+Hello! If this is your first time looking at a stylesheet within the text editor view, what you are reading right now is a "comment". Comments are added throughout this stylesheet with the purpose of making the source code easier to understand, comments will not be interpreted during the compile process. Since comments are not interpreted during the compile process, feel free to add or remove any comments.
+
+For help with MadCap Flare go to Help Ribbon > Topics Section > Open Help. Alternatively visit the Flare Online Help at help.madcapsoftware.com
+
+If you have any questions regarding how to work with this stylesheet or template project, please contact MadCap Technical Support. 
+https://www.madcapsoftware.com/support/contact-options.aspx
+
+NOTE: Generally, this stylesheet has elements listed out in the order that they appear in the topic from top to bottom. The exception are General styles which are at the top and the stylesheet mediums which are at the bottom.
+
+EXAMPLE: Since the search-bar is at the top of the topic page, it will be listed closer to the top of this stylesheet.
+
+===========================================================================================================================================================*/
+
+/*==Topic General Styles==*/
+
+body
+{
+	color: #404040;
+	font-family: Arial, Avenir, Myriad;
+	line-height: 1.7em;
+	margin: 0px;
+	max-height: 100%;
+}
+
+h1
+{
+	margin-bottom: 8px;
+	padding-bottom: 10px;
+	line-height: 1em;
+	font-family: Calibri;
+	font-weight: bold;
+	font-size: 24pt;
+	border-bottom: solid 2px #000000;
+	border-bottom-color: #3c90b3;
+}
+
+h2
+{
+	margin-bottom: 4px;
+	margin-top: 20px;
+	font-family: Calibri;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+h3
+{
+	font-size: 1.1em;
+	font-weight: normal;
+	margin-bottom: 4px;
+	margin-top: 16px;
+	font-family: Calibri;
+}
+
+h4
+{
+	font-family: Calibri;
+}
+
+li
+{
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	font-family: Calibri;
+	font-weight: normal;
+	font-size: 14pt;
+}
+
+img	/*Setting max-width: 100%; property makes images always fit the width of the container*/
+{
+	max-width: 100%;
+}
+
+img.thumbnail
+{
+	mc-thumbnail: popup;
+}
+
+.center
+{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	float: none !important;
+	text-align: center;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+/*== MadCap proxy assigned styles ==*/
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom: none;
+	font-size: .7em;
+	font-style: italic;
+	mc-breadcrumbs-prefix: 'You are here: ';
+}
+
+a.MCBreadcrumbsLink
+{
+	font-styleyes: italic;
+	text-decoration: underline;
+}
+
+a.MCBreadcrumbsLink:visited
+{
+	color: #000000;
+}
+
+a.MCBreadcrumbsLink:hover
+{
+	color: #ecf0f1;
+}
+
+MadCap|xref
+{
+	color: #2D8DCC;
+	font-weight: bold;
+	mc-format: '{para}';
+	text-decoration: underline;
+}
+
+MadCap|xref:hover
+{
+	color: #ecf0f1;
+}
+
+MadCap|dropDown
+{
+	mc-closed-image: url('../Images/Assets/Icons/Arrows/arrow-right-gray.png');
+	mc-open-image: url('../Images/Assets/Icons/Arrows/arrow-down-gray.png');
+}
+
+MadCap|dropDownHotspot
+{
+	color: #3f4652;
+	font-weight: bold;
+}
+
+/*== Master page assigned styles ==*/
+
+div.content-container	/*Wraps the content on the masterpage and provides the white background behind topics.*/
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0%;
+}
+
+div.topic-layout	/*This layout was created using the Responsive Layout Editor in MadCap Flare. Home Ribbon > Styles Section > Responsive Layout*/
+{
+	mc-grid-row: true;
+	margin: 0 auto;
+	background-color: #FFF;
+	min-height: 850px;
+	overflow: hidden;
+}
+
+div.topic-layout::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.topic-layout::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.topic-layout > div
+{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+div.topic-layout > div:nth-child(1)	/*Left pane container*/
+{
+	margin-left: 0%;
+	background-color: #2db1a5;
+	width: 26%;
+	background-image: url('../Images/Assets/HeroImage/staticbackgroundimage.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	float: left;
+	position: absolute;
+}
+
+div.topic-layout > div:nth-child(2)	/*Right pane container*/
+{
+	overflow: hidden;
+	width: 74%;
+	margin-top: 2em;
+	float: right;
+}
+
+/*== left pane styles ==*/
+
+div.heading-master	/*wraps the heading on the left pane*/
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15%;
+	padding-right: 15%;
+	margin-top: 15%;
+}
+
+h1.heading-master
+{
+	color: #ffffff;
+	font-family: Arial, Avenir, Myriad;
+	font-size: 5em;
+	text-align: center;
+}
+
+div.logo-menu	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-right: auto;
+	margin-left: 1em;
+}
+
+div.logo-menu::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.logo-menu::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.logo-menu > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 2%;
+}
+
+div.search-menu
+{
+	margin-top: 60px;
+}
+
+div.side-content	/*container for Menu proxy on the left pane*/
+{
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 33.33%;
+}
+
+/*==Home Tiles section==*/
+
+h1.hometopic	/*headings on the home topic*/
+{
+	text-align: center;
+	color: #2db1a5;
+	font-size: 2.5em;
+}
+
+div.home-tiles-container
+{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+div.home-tiles	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+div.home-tiles::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 11.5px;
+	padding-right: 11.5px;
+	overflow: hidden;
+}
+
+div.home-tiles > div:hover
+{
+	transform: scale(1.1);
+}
+
+div.home-tiles > div:nth-child(1)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+div.home-tiles > div:nth-child(2)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+div.home-tiles > div:nth-child(3)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+div.home-tiles > div:nth-child(4)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+/*=Elements for text contained within each home-tile=*/
+
+p.tile-title
+{
+	text-align: center;
+	color: #000000;
+	font-size: 1.1em;
+}
+
+div.home-tiles a	/*Complex Selector: Links within the home tiles will have the following properties*/
+{
+	text-decoration: none;
+	color: #000000;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+div.home-tiles a:hover	/*Complex Selector: When hovering over links within the home tiles the following properties will apply.*/
+{
+	color: #00DDC3;
+	text-decoration: underline;
+}
+
+/*==video tiles section==*/
+
+div.info-container
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+	border-top: solid 1px #d3d3d3;
+	padding-top: 10px;
+}
+
+div.info-section
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+div.info-section::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.info-section::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.info-section > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.info-section > div:nth-child(1)
+{
+	width: 50%;
+}
+
+div.info-section > div:nth-child(2)
+{
+	width: 45%;
+}
+
+div.video-tiles	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.video-tiles::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.video-tiles::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.video-tiles > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div.video-tiles > div:nth-child(1)
+{
+	width: 35%;
+	margin-left: 15%;
+}
+
+div.video-tiles > div:nth-child(2)
+{
+	width: 35%;
+	margin-left: 0;
+}
+
+div.video-tiles > div:nth-child(3)
+{
+	width: 33.333%;
+	margin-left: 0%;
+}
+
+div.video-tiles *	/*Text-align center set to all elements within div.video-tiles*/
+{
+	text-align: center;
+}
+
+/*== other topic assigned styles ==*/
+
+div.body-layout	/*This layout was created using the Responsive Layout Editor in MadCap Flare. Go to: Home Ribbon > Styles Section > Responsive Layout*/
+{
+	background-color: #FFF;
+	padding: 0 25px;
+	max-width: 80%;
+	margin-left: 1em;
+}
+
+div.body-layout::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.body-layout::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.body-layout > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.body-layout > div:nth-child(1)
+{
+	width: 78%;
+	margin-left: 1%;
+	min-height: 95vh;
+	border-right: solid 1px #d3d3d3;
+	padding-right: 20px;
+}
+
+div.body-layout > div:nth-child(2)	/*Menu Proxy container*/
+{
+	width: 18%;
+	margin-left: 2%;
+	padding: 20px 10px;
+}
+
+/*==Home Page Footer==*/
+
+div.footer
+{
+	background-color: #545454;
+	padding-top: 20px;
+	border-top: 1px solid #b3b3b3;
+	margin-top: 9em;
+}
+
+div.footer a	/*Complex Selector: Any anchor (links) tags that are within div.footer will have the following properties */
+{
+	text-decoration: none;
+	color: #DADADA;
+}
+
+div.footer p	/*Complex Selector: Any <p> that is contained within div.footer will have the following properties*/
+{
+	color: #fff;
+	font-size: 0.8em;
+}
+
+div.home-master-page-footer	/*This layout was created using the Responsive Layout Editor in MadCap Flare. Go to: Home Ribbon > Styles Section > Responsive Layout*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+div.home-master-page-footer::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-master-page-footer::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-master-page-footer > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.home-master-page-footer > div:nth-child(1)
+{
+	width: 33.333%;
+	margin-left: 0%;
+}
+
+div.home-master-page-footer > div:nth-child(2)
+{
+	width: 33.333%;
+	margin-left: 0%;
+}
+
+div.home-master-page-footer > div:nth-child(3)
+{
+	width: 33.333%;
+	margin-left: 0%;
+}
+
+/*===========================================================================================================================================================
+Styles after this point are styles that are for specific mediums. If any additional styles are added to this template they will be listed after mediums.
+[@media tablet] declares styles that will apply when the screen is in tablet view
+[@media mobile] declares styles that will apply when the screen is in mobile view
+===========================================================================================================================================================*/
+
+@media only screen and (max-width: 1273px)
+{
+	.main-section > .outer-row	/* Removes the padding around the topic container in tablet */
+	{
+		padding: 0;
+	}
+
+	div.topic-layout
+	{
+		max-width: 100%;
+		min-height: 100vh;
+		/*overrides the min-height set in the default medium*/
+	}
+
+	div.heading-master
+	{
+		margin-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	h1.heading-master
+	{
+		margin-top: 0;
+		padding-top: 5px;
+		font-size: 4em;
+	}
+
+	div.logo-menu
+	{
+		display: none;
+	}
+
+	div.topic-layout > div:nth-child(1)
+	{
+		width: 100%;
+		min-height: 160px;
+		float: none;
+		position: relative;
+	}
+
+	div.topic-layout > div:nth-child(2)
+	{
+		width: 100%;
+		float: none;
+		margin-top: 1em;
+	}
+
+	div.body-layout
+	{
+		max-width: 100%;
+	}
+
+	div.search-menu
+	{
+		margin-top: 0;
+	}
+
+	div.video-tiles > div:nth-child(1)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.video-tiles > div:nth-child(2)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+}
+
+@media only screen and (max-width: 767px)
+{
+	.main-section > .outer-row	/* Removes the padding around the topic container in mobile */
+	{
+		padding: 0;
+	}
+
+	h1.heading-master
+	{
+		font-size: 3.5em;
+	}
+
+	div.topic-layout > div:nth-child(1)
+	{
+		min-height: 200px;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	div.body-layout
+	{
+		max-width: 100%;
+	}
+
+	div.body-layout > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+		min-height: 95vh;
+		border: 0;
+		padding: 0;
+	}
+
+	div.body-layout > div:nth-child(2)
+	{
+		display: none;
+	}
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(3)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(4)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.video-tiles > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.video-tiles > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+}
+
+h1.appendixtitle
+{
+	text-align: left;
+	margin-left: 2in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 81pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 20pt;
+	letter-spacing: 0.05em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'Appendix {chapnum} ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 192px;
+	line-height: 24pt;
+	text-decoration: none;
+}
+
+p.body1
+{
+	text-align: left;
+	margin-left: 1in;
+	margin-right: 0in;
+	margin-top: 8pt;
+	margin-bottom: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 14pt;
+}
+
+p.tabletext
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 12pt;
+}
+
+span.bold
+{
+	font-weight: bold;
+}
+
+h1.chaptertitle
+{
+	text-align: left;
+	margin-left: 2in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 81pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 20pt;
+	letter-spacing: 0.05em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'C:Chapter {chapnum} ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 192px;
+	line-height: 24pt;
+	text-decoration: none;
+}
+
+h1.heading1
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 30pt;
+	margin-bottom: 6pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 14pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 15pt;
+	text-decoration: none;
+}
+
+h2.heading2
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 18pt;
+	margin-bottom: 4pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 12pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 14pt;
+	text-decoration: none;
+}
+
+p.bullet1
+{
+	text-align: left;
+	margin-left: 1.25in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 4pt;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: '• ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 24px;
+	mc-auto-number-class: zbulletsymbol;
+	line-height: 12pt;
+	text-decoration: none;
+	font-family: Calibri;
+}
+
+h3.heading3
+{
+	text-align: left;
+	margin-left: 0.75in;
+	margin-right: 0in;
+	margin-top: 12pt;
+	margin-bottom: 6pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 10pt;
+	text-decoration: none;
+}
+
+p.zcautionicon
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 16pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 0pt;
+	text-decoration: none;
+	mc-disabled: true;
+}
+
+p.zcautiontext
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'Caution:  ';
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 0px;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+MadCap|xref._Heading__on_page__
+{
+	mc-format: '“{paratext}” on page {chapnum}-{page}';
+}
+
+p.figurecaption
+{
+	text-align: left;
+	margin-left: 1.75in;
+	margin-right: 0in;
+	margin-top: 10pt;
+	margin-bottom: 5pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'F:Figure {chapnum}-{n+}{ }{ }. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 72px;
+	line-height: 9pt;
+	text-decoration: none;
+}
+
+p.Anchor
+{
+	text-align: left;
+	margin-left: 1in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 3pt;
+	text-decoration: none;
+}
+
+MadCap|xref.ContinueTo
+{
+	mc-format: '(continued in {title})';
+}
+
+MadCap|xref.ContinueFrom
+{
+	mc-format: '(continued from {title})';
+}
+
+p.tablecaption
+{
+	text-align: left;
+	margin-left: 1.75in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-weight: bold;
+	font-style: normal;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'z:Table {chapnum}-{n+}. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 72px;
+	line-height: 11pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 10pt;
+}
+
+MadCap|xref.Figure__
+{
+	mc-format: 'Figure {paranumonly}';
+}
+
+MadCap|xref.Chapter_____Chapter_Title__
+{
+	mc-format: 'Chapter {chapnum}, “{paratext[chaptertitle]},”';
+}
+
+i.italic
+{
+	font-style: italic;
+}
+
+p.znoteicon
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 16pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 0pt;
+	text-decoration: none;
+	mc-disabled: true;
+}
+
+p.znotetext
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'Note:  ';
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 0px;
+	mc-auto-number-class: bold;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+sup.superscript
+{
+	font-size: 80%;
+	vertical-align: super;
+}
+
+p.title
+{
+	text-align: left;
+	margin-left: 1in;
+	margin-right: 0in;
+	margin-top: 19pt;
+	margin-bottom: 19pt;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 24pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 29pt;
+	text-decoration: none;
+	font-family: Calibri;
+}
+
+p.CopyrightHead
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 12pt;
+	margin-bottom: 0pt;
+	font-family: Helvetica;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+p.CopyrightBody
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 5pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.CopyrightBody2
+{
+	text-align: left;
+	margin-left: 1in;
+	margin-right: 0in;
+	margin-top: 7pt;
+	margin-bottom: 7pt;
+	font-family: Helvetica;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.bullet2
+{
+	text-align: left;
+	margin-left: 1.5in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 4pt;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: '— ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 24px;
+	mc-auto-number-class: zbulletsymbol;
+	line-height: 12pt;
+	text-decoration: none;
+	font-family: Calibri;
+}
+
+MadCap|xref.Figure___on_page__
+{
+	mc-format: 'Figure {paranumonly} on page {chapnum}‑{page}';
+}
+
+p.tablehead
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-weight: bold;
+	font-style: normal;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 12pt;
+}
+
+p.tablehead-side
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-weight: bold;
+	font-style: normal;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 10.5pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 9pt;
+}
+
+MadCap|xref.Table__
+{
+	mc-format: 'Table {paranumonly}';
+}
+
+p.contentstitle
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 22pt;
+	margin-bottom: 40pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 18pt;
+	letter-spacing: 0.05em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 22pt;
+	text-decoration: none;
+}
+
+p.prefacetitleTOC
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 11pt;
+	margin-bottom: 0pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.chaptertitleTOC
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 11pt;
+	margin-bottom: 0pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.heading1TOC
+{
+	text-align: left;
+	margin-left: 0.5in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.heading2TOC
+{
+	text-align: left;
+	margin-left: 0.75in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.heading3TOC
+{
+	text-align: left;
+	margin-left: 1in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.appendixtitleTOC
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 11pt;
+	margin-bottom: 0pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	text-decoration: none;
+	line-height: 12pt;
+}
+
+p.indextitleTOC
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 11pt;
+	margin-bottom: 0pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.loftitle
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 22pt;
+	margin-bottom: 40pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 18pt;
+	letter-spacing: 0.05em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 22pt;
+	text-decoration: none;
+}
+
+p.figurecaptionwideLOF
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.figurecaptionLOF
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-auto-number-format: ;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 0px;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.lottitle
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 22pt;
+	margin-bottom: 40pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 18pt;
+	letter-spacing: 0.05em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 22pt;
+	text-decoration: none;
+}
+
+p.tablecaptionLOT
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+	font-family: Calibri;
+}
+
+p.prefacetitle
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 76pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 20pt;
+	letter-spacing: 0.05em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 24pt;
+	text-decoration: none;
+}
+
+p.prefheading1
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 28pt;
+	margin-bottom: 6pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 14pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 15pt;
+	text-decoration: none;
+}
+
+span.link
+{
+	color: #0000ff;
+}
+
+MadCap|xref.Appendix_____Chapter_Title__
+{
+	mc-format: 'Appendix {paranumonly}, “{paratext[appendixtitle]},”';
+}
+
+p.zwarningicon
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 16pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 0pt;
+	text-decoration: none;
+	mc-disabled: true;
+}
+
+p.zwarningtext
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'Warning:  ';
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 0px;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+p.zwristwarningicon
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 16pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 0pt;
+	text-decoration: none;
+	mc-disabled: true;
+}
+
+p.zlaserwarningicon
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 16pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 0pt;
+	text-decoration: none;
+	mc-disabled: true;
+}
+
+span.courierplain
+{
+	font-family: 'Courier New';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 8.5pt;
+	line-height: 10.5pt;
+	text-decoration: none;
+}
+
+p.prefheading2
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 18pt;
+	margin-bottom: 4pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 12pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 14pt;
+	text-decoration: none;
+}
+
+MadCap|xref.Heading
+{
+	mc-format: '“{paratext}”';
+}
+
+p.body2
+{
+	text-align: left;
+	margin-left: 1.25in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 14pt;
+}
+
+p.figurecaptionwide
+{
+	text-align: left;
+	margin-left: 0.75in;
+	margin-right: 0in;
+	margin-top: 10pt;
+	margin-bottom: 5pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'F:Figure {chapnum}-{n+}. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 72px;
+	line-height: 9pt;
+	text-decoration: none;
+}
+
+p.numlist
+{
+	text-align: left;
+	margin-left: 1.25in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-auto-number-format: 'S:{n=1}. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 24px;
+	line-height: 12pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 12pt;
+}
+
+p.numlist_
+{
+	text-align: left;
+	margin-left: 1.25in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-auto-number-format: 'S:{n+}. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 24px;
+	line-height: 12pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 12pt;
+}
+
+p.step1
+{
+	text-align: left;
+	margin-left: 1.25in;
+	margin-right: 0in;
+	margin-top: 7pt;
+	margin-bottom: 6pt;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'S:{n=1}. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 24px;
+	mc-auto-number-class: zstepno;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+p.step1_
+{
+	text-align: left;
+	margin-left: 1.25in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'S:{n+}. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 24px;
+	mc-auto-number-class: zstepno;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+p.body3
+{
+	text-align: left;
+	margin-left: 1.5in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 14pt;
+}
+
+p.stepa
+{
+	text-align: left;
+	margin-left: 1.5in;
+	margin-right: 0in;
+	margin-top: 7pt;
+	margin-bottom: 6pt;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'A:{a=1}. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 24px;
+	mc-auto-number-class: zstepno;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+p.stepa_
+{
+	text-align: left;
+	margin-left: 1.5in;
+	margin-right: 0in;
+	margin-top: 7pt;
+	margin-bottom: 6pt;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: 'A:{a+}. ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 24px;
+	mc-auto-number-class: zstepno;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+p.tablebullet
+{
+	text-align: left;
+	margin-left: 0.125in;
+	margin-right: 0in;
+	margin-top: 4pt;
+	margin-bottom: 4pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	mc-auto-number-format: '• ';
+	mc-auto-number-position: outside-head;
+	mc-auto-number-offset: 12px;
+	line-height: 11pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 12pt;
+}
+
+MadCap|xref.Table___on_page__
+{
+	mc-format: 'Table {paranumonly} on page {chapnum}‑{page}';
+}
+
+p.indextitle
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 18pt;
+	letter-spacing: 0.05em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 18pt;
+	text-decoration: none;
+}
+
+p.GroupTitlesIX
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 14pt;
+	margin-bottom: 8pt;
+	font-family: Arial;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 12pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 8pt;
+	text-decoration: none;
+}
+
+p.Level1IX
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 10pt;
+	text-decoration: none;
+}
+
+p.Level2IX
+{
+	text-align: left;
+	margin-left: 0.25in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 10pt;
+	text-decoration: none;
+}
+
+p.Level3IX
+{
+	text-align: justify;
+	margin-left: 0.5in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.body
+{
+	text-align: left;
+	margin-left: 1in;
+	margin-right: 0in;
+	margin-top: 8pt;
+	margin-bottom: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+	font-family: Calibri;
+	font-size: 14pt;
+}
+
+span.timesbold
+{
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.step1text
+{
+	text-align: left;
+	margin-left: 1.5in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.bullet2text
+{
+	text-align: left;
+	margin-left: 1.5in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 12pt;
+	text-decoration: none;
+}
+
+p.note
+{
+	text-align: justify;
+	margin-left: 1in;
+	margin-right: 0in;
+	margin-top: 8pt;
+	margin-bottom: 0pt;
+	font-family: 'Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 10pt;
+	letter-spacing: 0.01em;
+	color: #000000;
+	mc-hyphenate: never;
+	text-indent: 0px;
+	line-height: 12.4pt;
+	text-decoration: none;
+}
+
+p.zheader
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: Arial;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+p.zfooter
+{
+	text-align: left;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: Arial;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 9pt;
+	letter-spacing: 0em;
+	color: #000000;
+	text-indent: 0px;
+	line-height: 11pt;
+	text-decoration: none;
+}
+
+span._Override
+{
+	
+}
+
+p.appentixtitle
+{
+	
+}
+
+em.arielbody
+{
+	
+}
+
+span.arielbody
+{
+	
+}
+
+em.arieltable
+{
+	
+}
+
+@media print
+{
+	p.body
+	{
+		font-family: serif;
+	}
+
+	h1
+	{
+		font-family: serif;
+	}
+
+	p
+	{
+		font-family: serif;
+	}
+
+	p.body1
+	{
+		font-family: serif;
+	}
+
+	p.body2
+	{
+		font-family: serif;
+	}
+
+	p.body3
+	{
+		font-family: serif;
+	}
+
+	p.bullet1
+	{
+		font-family: serif;
+	}
+
+	p.bullet2
+	{
+		font-family: serif;
+	}
+
+	p.numlist
+	{
+		font-family: serif;
+	}
+
+	p.numlist_
+	{
+		font-family: serif;
+	}
+
+	p.title
+	{
+		font-family: serif;
+	}
+
+	p.tabletext
+	{
+		font-family: serif;
+	}
+
+	p.tablehead-side
+	{
+		font-family: serif;
+	}
+
+	p.tablehead
+	{
+		font-family: serif;
+	}
+
+	p.tablecaptionLOT
+	{
+		font-family: serif;
+	}
+
+	p.tablecaption
+	{
+		font-family: serif;
+	}
+
+	p.tablebullet
+	{
+		font-family: serif;
+	}
+
+	h2
+	{
+		font-family: serif;
+	}
+
+	h3
+	{
+		font-family: serif;
+	}
+
+	h4
+	{
+		font-family: serif;
+	}
+}
+
